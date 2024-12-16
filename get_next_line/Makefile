@@ -30,7 +30,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar -rcs $@ $(OBJS)
-	mkdir $(OBJS_DIR)
+	mkdir -p $(OBJS_DIR)
 	mv srcs/*.o $(OBJS_DIR)
 
 %.o:%.c

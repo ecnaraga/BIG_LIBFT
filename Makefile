@@ -16,7 +16,7 @@ CFLAGS 	= -Wall -Wextra -Werror
 
 ################################### LIBRARIES ###################################
 
-PATH_LIBFT 		=	./ft_printf/libft 
+PATH_LIBFT 		=	./ft_printf/LIBFT 
 PATH_PRINTF 	=	./ft_printf
 PATH_GNL 		=	./get_next_line 
 
@@ -31,7 +31,7 @@ all: $(NAME)
 $(NAME):	
 	make -C $(PATH_PRINTF)
 	make -C $(PATH_GNL)
-	mv ./ft_printf/libft/libft.a ./libft.a
+	mv ./ft_printf/LIBFT/libft.a ./libft.a
 	mv ./ft_printf/libftprintf.a ./libftprintf.a
 	mv ./get_next_line/get_next_line.a ./get_next_line.a
 	ar -rcT $(NAME) $(LIBFT) $(LIBFT_PRINTF) $(LIBFT_GNL)
